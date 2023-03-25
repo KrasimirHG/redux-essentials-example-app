@@ -54,7 +54,8 @@ const postsSlice = createSlice({
         existingPost.title = title
         existingPost.content = content
       }
-    },
+    }
+  },
     extraReducers(builder) {
       builder
           .addCase(fetchPosts.pending, (state, action) => {
@@ -69,7 +70,6 @@ const postsSlice = createSlice({
             state.error = action.error.message
           })
     }
-  },
 })
 
 export const { postAdded, postUpdated, reactionAdded } = postsSlice.actions;
